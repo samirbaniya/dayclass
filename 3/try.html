@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Sidebars with Scrolling Center</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        height: 100%;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 200px; /* Adjust as needed */
+        overflow-y: auto; /* Enable scrolling if sidebar content exceeds height */
+        color: #fff; /* Text color */
+        padding: 20px;
+      }
+
+      .sidebar.left {
+        left: 0;
+        background: #007bff; /* Blue color for the left sidebar */
+      }
+
+      .sidebar.right {
+        right: 0;
+        background: #28a745; /* Green color for the right sidebar */
+      }
+
+      .center-content {
+        margin-left: 200px; /* Same as the width of the left sidebar */
+        margin-right: 200px; /* Same as the width of the right sidebar */
+        padding: 20px;
+        height: 100%;
+        background: #f8f9fa; /* Light gray color for the center content */
+        overflow-y: auto; /* Enable scrolling in the center content */
+      }
+
+      .content-section {
+        margin-bottom: 20px;
+      }
+
+      .content-section h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .content-section p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar left">
+        <h2>Left Sidebar</h2>
+        <p>
+          This is the left sidebar. It has some content to demonstrate
+          scrolling. Continue adding content to see the scroll effect.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet eros at justo cursus, sit amet malesuada ex volutpat.
+        </p>
+        <p>
+          Ut laoreet, lorem eu fermentum pharetra, quam dolor dictum lacus, at
+          fermentum nulla libero eu libero.
+        </p>
+        <p>
+          Donec euismod nulla ut nisi tristique, vel vehicula turpis vestibulum.
+          Vivamus sit amet felis sed arcu varius tincidunt.
+        </p>
+        <p>
+          Curabitur convallis, massa in lacinia consectetur, nunc velit feugiat
+          nulla, a egestas odio felis vel sapien.
+        </p>
+        <p>
+          Sed ac orci nec libero suscipit pharetra at et orci. Nunc vestibulum
+          urna at eros dignissim, id scelerisque elit laoreet.
+        </p>
+        <p>
+          Pellentesque vitae libero sed dui posuere condimentum. In at suscipit
+          erat. Phasellus facilisis, purus a cursus vulputate, eros lorem
+          gravida sapien.
+        </p>
+        <p>
+          Aliquam sit amet dui in velit vehicula tincidunt. Suspendisse potenti.
+          In hac habitasse platea dictumst.
+        </p>
+      </div>
+      <div class="center-content">
+        <h1>Center Content</h1>
+        <div class="content-section">
+          <h2>Section 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            vel venenatis lectus. Curabitur vel orci id dui vulputate malesuada.
+            Phasellus dictum, sem sit amet dictum cursus, arcu nisi consequat
+            odio, eget vulputate lectus odio a purus.
+          </p>
+          <p>
+            Aliquam erat volutpat. In at sollicitudin libero. Sed sollicitudin
+            auctor urna, nec aliquam eros dictum vel.
+          </p>
+        </div>
+        <div class="content-section">
+          <h2>Section 2</h2>
+          <p>
+            Suspendisse potenti. Donec ac risus ut libero egestas vehicula.
+            Aenean nec urna at risus pharetra tincidunt. Mauris sed metus vitae
+            tortor bibendum luctus a eget odio.
+          </p>
+          <p>
+            Integer varius justo a sollicitudin tristique. Quisque auctor, justo
+            at facilisis tincidunt, dui elit malesuada mi, a pharetra eros nisi
+            sed justo.
+          </p>
+        </div>
+        <div class="content-section">
+          <h2>Section 3</h2>
+          <p>
+            Nullam ut orci eu ligula faucibus elementum. Vivamus a quam id lacus
+            faucibus cursus et et ligula. Nulla facilisi. Sed accumsan, arcu nec
+            vehicula cursus, nisi libero blandit lorem, a facilisis lacus libero
+            et magna.
+          </p>
+          <p>
+            Phasellus aliquet erat sit amet mi sollicitudin, ac faucibus ante
+            lacinia. Praesent fringilla neque a elit dapibus, sit amet
+            scelerisque erat rutrum.
+          </p>
+        </div>
+        <div class="content-section">
+          <h2>Section 4</h2>
+          <p>
+            Proin eget sagittis justo. Duis ac est id magna consectetur
+            ullamcorper. Fusce sit amet odio non magna fermentum ultricies non a
+            eros. Cras convallis, purus in auctor dapibus, erat ante blandit
+            eros, nec pretium sem dolor in odio.
+          </p>
+          <p>
+            Integer dignissim leo nec elit ullamcorper, sed rhoncus nulla
+            dictum. Donec tincidunt libero vel ligula cursus, a tempus risus
+            luctus.
+          </p>
+        </div>
+        <div class="content-section">
+          <h2>Section 5</h2>
+          <p>
+            Cras sollicitudin velit et libero dictum, et fringilla augue
+            lacinia. Sed vestibulum metus in augue vestibulum, at malesuada
+            lectus accumsan. Integer sagittis mauris ut justo sodales, nec
+            tempor felis bibendum.
+          </p>
+          <p>
+            Aenean euismod erat sed odio cursus, in vehicula massa dictum.
+            Suspendisse potenti. Vivamus vitae nisi vel nisi congue congue.
+          </p>
+        </div>
+      </div>
+      <div class="sidebar right">
+        <h2>Right Sidebar</h2>
+        <p>
+          This is the right sidebar. It also has content to demonstrate
+          scrolling. Add more content to see the scroll effect here as well.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet eros at justo cursus, sit amet malesuada ex volutpat.
+        </p>
+        <p>
+          Ut laoreet, lorem eu fermentum pharetra, quam dolor dictum lacus, at
+          fermentum nulla libero eu libero.
+        </p>
+        <p>
+          Donec euismod nulla ut nisi tristique, vel vehicula turpis vestibulum.
+          Vivamus sit amet felis sed arcu varius tincidunt.
+        </p>
+        <p>
+          Curabitur convallis, massa in lacinia consectetur, nunc velit feugiat
+          nulla, a egestas odio felis vel sapien.
+        </p>
+        <p>
+          Sed ac orci nec libero suscipit pharetra at et orci. Nunc vestibulum
+          urna at eros dignissim, id scelerisque elit laoreet.
+        </p>
+        <p>
+          Pellentesque vitae libero sed dui posuere condimentum. In at suscipit
+          erat. Phasellus facilisis, purus a cursus vulputate, eros lorem
+          gravida sapien.
+        </p>
+        <p>
+          Aliquam sit amet dui in velit vehicula tincidunt. Suspendisse potenti.
+          In hac habitasse platea dictumst.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
