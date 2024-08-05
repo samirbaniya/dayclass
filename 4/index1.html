@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <span id="name">sam</span><br>
+    Age: <span id="age">22</span><br>
+    Class: <span id="class">CSIT</span><br>
+    Address: <span id="address">Banepa</span><br>
+    <button type="button" id="read" onclick="read()">Read</button>
+    <button type="button" onclick="writes()">Write</button>
+    <button type="button" onclick="update()">Update</button>
+
+
+
+    <script>
+        function read(){
+            let obj={
+                name:document.getElementById("name").innerHTML,
+                age:document.getElementById("age").innerHTML,
+                class:document.getElementById("class").innerHTML,
+                address:document.getElementById("address").innerHTML                
+            }
+            console.log(obj);
+        }
+        function writes(){
+                let username=document.getElementById("name");
+                username.innerHTML="Raj";
+                let userage=document.getElementById("age");
+                userage.innerHTML="21";
+                let userclass=document.getElementById("class");
+                userclass.innerHTML="BCA";
+                let useraddress=document.getElementById("address");
+                useraddress.innerHTML="Panauti";
+            }
+            function update(){
+                let username=document.getElementById("name");
+                username.innerHTML="Kiran";
+                let userage=document.getElementById("age");
+                userage.innerHTML="23";
+                let userclass=document.getElementById("class");
+                userclass.innerHTML="Management";
+                let useraddress=document.getElementById("address");
+                useraddress.innerHTML="Dhulikhel";
+            }
+    </script>
+</body>
+</html>
